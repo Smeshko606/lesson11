@@ -1,0 +1,22 @@
+@mixin flexbox($direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+%button {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 30px;
+  background-color: rgb(42, 165, 138);
+  border: 1px solid white;
+  text-decoration: underline;
+  text-decoration-color: rgb(0, 0, 0);
+}
+.block {
+  @include flexbox(column, center, center);
+}
+.button {
+  @extend %button;
+  margin-top: 30px;
+}
